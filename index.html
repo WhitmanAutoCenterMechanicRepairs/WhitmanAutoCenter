@@ -1,461 +1,232 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Same Day Auto Brake Service | Whitman Auto Center</title>
-  <meta name="description" content="Same-day brake repair & service in Whitman, MA. FREE brake inspections available today. Call (781) 447-0400." />
-  <meta name="theme-color" content="#0b5cab" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitman Auto Center - Same Day Brake Service</title>
+    <style>
+        /* General Reset and Typography */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
 
-  <!-- Google tag (gtag.js) - Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17714237601"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17714237601');
-  </script>
+        /* Navigation Bar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-  <!-- Event snippet function (Click to call conversion) -->
-  <script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) !== 'undefined') {
-        window.location = url;
-      }
-    };
-    try {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-17714237601/aORaCKmQ4dcbEKGh5_5B',
-        'value': 1.0,
-        'currency': 'USD',
-        'event_callback': callback
-      });
-    } catch (e) {
-      // If gtag is unavailable for any reason, still proceed to the link
-      callback();
-    }
-    return false;
-  }
-  </script>
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 500;
+        }
 
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --brand: #0b5cab;
-      --brand2: #0a3f79;
-      --card: #f8fafc;
-      --border: rgba(15, 23, 42, 0.10);
-      --shadow: 0 10px 25px rgba(2, 6, 23, 0.08);
-      --radius: 18px;
-    }
+        /* Hero Banner Section */
+        .hero-banner {
+            /* Updated background image to use the local image_0.png file */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image_0.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh; /* Adjusted height to accommodate more content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.45;
-    }
+        .hero-banner h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
 
-    /* Simple "Google Sites-ish" top bar */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar-inner {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-    }
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--brand);
-      box-shadow: 0 0 0 6px rgba(11, 92, 171, 0.12);
-    }
-    .top-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+        .hero-banner p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
 
-    .container {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 22px 16px 90px;
-    }
+        /* Highlight Text in Banner */
+        .hero-banner .highlight-text {
+            color: #ffeb3b; /* Yellow for high contrast in the banner */
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
 
-    .hero {
-      margin-top: 18px;
-      border-radius: calc(var(--radius) + 8px);
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      background:
-        radial-gradient(1100px 360px at 20% 0%, rgba(11,92,171,0.18), transparent 55%),
-        radial-gradient(900px 320px at 85% 20%, rgba(10,63,121,0.16), transparent 60%),
-        linear-gradient(180deg, #ffffff, #f7fbff);
-    }
+        /* Button Style in Banner */
+        .hero-banner .cta-button {
+            display: inline-block;
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.2s;
+        }
 
-    .hero-inner {
-      padding: 34px 22px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 18px;
-      align-items: start;
-    }
+        .hero-banner .cta-button:hover {
+            background-color: #b71c1c;
+            transform: scale(1.05);
+        }
 
-    h1 {
-      margin: 0 0 10px;
-      font-size: clamp(28px, 3.2vw, 44px);
-      line-height: 1.08;
-      letter-spacing: -0.4px;
-    }
-    .sub {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(11, 92, 171, 0.10);
-      border: 1px solid rgba(11, 92, 171, 0.18);
-      color: var(--brand2);
-      font-weight: 700;
-      font-size: 14px;
-      margin-bottom: 12px;
-    }
-    .lead {
-      margin: 0 0 18px;
-      font-size: 16px;
-      color: var(--text);
-    }
+        /* Main Content Section */
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
 
-    .cta {
-      display: grid;
-      gap: 12px;
-      align-content: start;
-      padding: 18px;
-      border-radius: var(--radius);
-      border: 1px solid rgba(11, 92, 171, 0.20);
-      background: rgba(255,255,255,0.72);
-    }
+        .info-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: center;
+        }
 
-    .btn {
-      appearance: none;
-      border: 0;
-      border-radius: 14px;
-      padding: 14px 16px;
-      font-weight: 800;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: transform .06s ease, box-shadow .12s ease, background .12s ease;
-      user-select: none;
-      white-space: nowrap;
-    }
-    .btn:active { transform: translateY(1px); }
-    .btn-primary {
-      background: var(--brand);
-      color: #fff;
-      box-shadow: 0 10px 18px rgba(11,92,171,0.22);
-    }
-    .btn-primary:hover { background: #0a549d; }
-    .btn-outline {
-      background: #fff;
-      color: var(--brand2);
-      border: 1px solid rgba(11, 92, 171, 0.30);
-    }
+        /* New Service List Section */
+        .service-list-section {
+            padding: 40px 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
 
-    .tiny {
-      font-size: 13px;
-      color: var(--muted);
-      margin: 0;
-    }
+        .service-list-title {
+            font-size: 2.5rem;
+            color: #d32f2f;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
+        .service-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px;
-    }
-    .card h3 {
-      margin: 0 0 6px;
-      font-size: 16px;
-    }
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
+        .service-list li {
+            font-size: 1.2rem;
+            margin: 10px 20px;
+            color: #333;
+            position: relative;
+            padding-left: 25px;
+        }
 
-    .section {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
+        .service-list li::before {
+            content: '✓';
+            color: #d32f2f;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
 
-    .list {
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-    .list li { margin: 6px 0; }
+        .service-areas {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+        }
 
-    .footer {
-      margin-top: 22px;
-      border-top: 1px solid var(--border);
-      padding-top: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
 
-    /* Sticky mobile call bar */
-    .sticky-call {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 30;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid var(--border);
-    }
-    .sticky-inner {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .sticky-left {
-      display: grid;
-      gap: 2px;
-    }
-    .sticky-left strong {
-      font-size: 14px;
-      color: var(--text);
-    }
-    .sticky-left span {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    @media (max-width: 860px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr; }
-      .section { grid-template-columns: 1fr; }
-      .top-actions { display: none; }
-    }
-  </style>
-
-  <!-- Basic LocalBusiness structured data (optional but helpful) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": "Whitman Auto Center",
-    "telephone": "(781) 447-0400",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "539 Washington St",
-      "addressLocality": "Whitman",
-      "addressRegion": "MA",
-      "postalCode": "02382",
-      "addressCountry": "US"
-    },
-    "areaServed": ["Whitman, MA", "Brockton, MA", "West Bridgewater, MA", "Abington, MA", "Rockland, MA", "Hanson, MA", "Bridgewater, MA", "Weymouth, MA", "Norwell, MA", "East Bridgewater, MA", "Pembroke, MA"]
-  }
-  </script>
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-banner h2 {
+                font-size: 2.2rem;
+            }
+            .hero-banner .highlight-text {
+                font-size: 1.5rem;
+            }
+            .navbar {
+                padding: 15px 20px;
+            }
+            .service-list li {
+                margin: 10px;
+                flex-basis: 100%;
+                text-align: left;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand" aria-label="Whitman Auto Center">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Whitman Auto Center</span>
-      </div>
 
-      <div class="top-actions">
-        <a class="btn btn-outline" href="https://www.google.com/maps?q=539+Washington+St,+Whitman,+MA+02382" target="_blank" rel="noopener">Directions</a>
-        <a class="btn btn-primary"
-           href="tel:+17814470400"
-           onclick="return gtag_report_conversion('tel:+17814470400');">Call (781) 447-0400</a>
-      </div>
-    </div>
-  </header>
+    <nav class="navbar">
+        <h1>Whitman Auto Center</h1>
+    </nav>
 
-  <main class="container">
-    <section class="hero" aria-label="Same Day Auto Brake Service">
-      <div class="hero-inner">
-        <div>
-          <h1>Same Day Auto Brake Service</h1>
-          <p class="sub">
-            20+ Years of Experience Serving Whitman, Brockton, West Bridgewater, Abington, Rockland, Hanson,
-            Bridgewater, Weymouth, Norwell, East Bridgewater, Pembroke, and beyond!
-          </p>
+    <header class="hero-banner">
+        <h2>Same Day Auto Brake Service</h2>
+        <p>20+ Years of Experience Serving Whitman, Brockton, West Bridgewater, Abington, Rockland, Hanson, Bridgewater, Weymouth, Norwell, East Bridgewater, Pembroke, and beyond!</p>
+        
+        <span class="highlight-text">FREE Brake Inspections Available Today!</span>
+        <a href="tel:7814470400" class="cta-button">Call Now For Service: 781-447-0400</a>
+    </header>
 
-          <div class="pill">FREE Brake Inspections Available Today!</div>
+    <main class="container">
+        <p class="info-text">
+            Call now for same-day brake repair & service. Rated 4.8/5 for brakes by local drivers. <br>
+            5/5 on Carfax. 20+ years of trusted brake repair for all makes & models. <br>
+            <strong>Nearby in Whitman, MA!</strong>
+        </p>
 
-          <p class="lead">
-            Call now for same-day brake repair &amp; service. Rated 4.8/5 for brakes by local drivers.
-            5/5 on Carfax. 20+ years of trusted brake repair for all makes &amp; models. Nearby in Whitman, MA!
-          </p>
+        <section class="service-list-section">
+            <h2 class="service-list-title">FREE Brake Inspections</h2>
+            <ul class="service-list">
+                <li>Brake Pads & Rotors</li>
+                <li>Brake Fluid Exchange</li>
+                <li>Brake Line Repair</li>
+                <li>Brake Caliper Service</li>
+                <li>ABS System Diagnosis</li>
+                <li>Master Cylinder Replacement</li>
+            </ul>
+        </section>
+
+        <div class="service-areas">
+            <p>Serving Whitman, Brockton, West Bridgewater, Abington, Rockland, Hanson, Bridgewater, Weymouth, Norwell, East Bridgewater, Pembroke, and beyond.</p>
         </div>
 
-        <aside class="cta" aria-label="Call to action">
-          <a class="btn btn-primary"
-             href="tel:+17814470400"
-             onclick="return gtag_report_conversion('tel:+17814470400');">
-            Call Now — (781) 447-0400
-          </a>
-          <a class="btn btn-outline" href="https://www.google.com/maps?q=539+Washington+St,+Whitman,+MA+02382" target="_blank" rel="noopener">
-            Get Directions
-          </a>
-          <p class="tiny">
-            539 Washington St, Whitman, MA 02382<br/>
-            If you’re on desktop, clicking “Call Now” may open your phone app or dialer.
-          </p>
-        </aside>
-      </div>
-    </section>
+    </main>
 
-    <section class="grid" aria-label="Trust highlights">
-      <div class="card">
-        <h3>Local trust</h3>
-        <p>Rated <strong>4.8/5</strong> by local drivers for brake service.</p>
-      </div>
-      <div class="card">
-        <h3>Third‑party proof</h3>
-        <p><strong>5/5</strong> on Carfax — verified reviews from real customers.</p>
-      </div>
-      <div class="card">
-        <h3>20+ years</h3>
-        <p>Trusted service for <strong>all makes &amp; models</strong> in the Whitman area.</p>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Details">
-      <div class="card">
-        <h3>Brake services we handle</h3>
-        <p>Common same‑day brake work includes:</p>
-        <ul class="list">
-          <li>Brake inspections (free)</li>
-          <li>Brake pads &amp; rotors</li>
-          <li>Calipers &amp; hardware</li>
-          <li>Brake fluid / bleeding</li>
-          <li>Brake noise &amp; vibration diagnostics</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Service area</h3>
-        <p>We regularly serve drivers from:</p>
-        <ul class="list">
-          <li>Whitman, Brockton, West Bridgewater, Abington</li>
-          <li>Rockland, Hanson, Bridgewater, Weymouth</li>
-          <li>Norwell, East Bridgewater, Pembroke</li>
-        </ul>
-        <p style="margin-top:10px;color:var(--muted);font-size:14px;">
-          Not on the list? If you’re nearby, call and we’ll help.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Location">
-      <div class="card">
-        <h3>Location</h3>
-        <p><strong>539 Washington St, Whitman, MA 02382</strong></p>
-        <p style="margin-top:8px;">
-          <a class="btn btn-outline" style="padding:10px 12px;border-radius:12px;"
-             href="https://www.google.com/maps?q=539+Washington+St,+Whitman,+MA+02382" target="_blank" rel="noopener">
-            Open in Google Maps
-          </a>
-        </p>
-        <p class="tiny" style="margin-top:10px;">
-          Tip: Tell us your year/make/model and the symptoms (noise, vibration, soft pedal, warning light).
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Call now</h3>
-        <p>Fastest way to schedule same‑day service:</p>
-        <p style="margin-top:12px;">
-          <a class="btn btn-primary"
-             href="tel:+17814470400"
-             onclick="return gtag_report_conversion('tel:+17814470400');">
-            Call (781) 447-0400
-          </a>
-        </p>
-        <p class="tiny" style="margin-top:10px;">
-          This button is wired to your Google Ads click‑to‑call conversion (AW‑17714237601).
-        </p>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div>© 2025 Whitman Auto Center. All rights reserved.</div>
-      <div style="margin-top:6px;">This is a standalone HTML landing page (not Google Sites) so conversion tracking is simpler.</div>
+    <footer>
+        <p>&copy; 2024 Whitman Auto Center</p>
     </footer>
-  </main>
 
-  <div class="sticky-call" aria-label="Sticky call bar">
-    <div class="sticky-inner">
-      <div class="sticky-left">
-        <strong>Same‑day brake service</strong>
-        <span>FREE brake inspections • 539 Washington St, Whitman, MA 02382</span>
-      </div>
-      <a class="btn btn-primary"
-         style="padding:12px 14px;border-radius:14px;"
-         href="tel:+17814470400"
-         onclick="return gtag_report_conversion('tel:+17814470400');">
-        Call Now
-      </a>
-    </div>
-  </div>
 </body>
 </html>
