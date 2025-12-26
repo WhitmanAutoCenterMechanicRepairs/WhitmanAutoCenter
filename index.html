@@ -182,6 +182,25 @@
                 flex-basis: 100%;
                 text-align: left;
             }
+            /* Google Map Section */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
         }
     </style>
 </head>
@@ -218,6 +237,12 @@
                 <li>Master Cylinder Replacement</li>
             </ul>
         </section>
+        <div class="map-container">
+    <iframe 
+        src="https://maps.google.com/maps?q=539%20Washington%20St%2C%20Whitman%2C%20MA%2002382&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+        allowfullscreen>
+    </iframe>
+</div>
 
         <div class="service-areas">
             <p>Serving Whitman, Brockton, West Bridgewater, Abington, Rockland, Hanson, Bridgewater, Weymouth, Norwell, East Bridgewater, Pembroke, and beyond.</p>
